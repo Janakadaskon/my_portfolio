@@ -3,11 +3,9 @@ import { AiOutlineAim, AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import Image from 'next/image'
-import {useSpring, animated} from 'react-spring'
 
 import Profile from '../public/assets/fav.jpeg'
-import { fromJSON } from 'postcss'
-import { transform } from 'next/dist/build/swc'
+
 
 const Main = () => {
 

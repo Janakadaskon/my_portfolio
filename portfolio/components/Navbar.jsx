@@ -29,19 +29,19 @@ const Navbar = () => {
           />
           <div>
             <ul className='hidden md:flex'>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>HOME</li>
               </Link>
-              <Link href='/#About'>
+              <Link href='/#About' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>ABOUT</li>
               </Link>
-              <Link href='/#Skills'>
+              <Link href='/#Skills' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>SKILLS</li>
               </Link>
-              <Link href='/#Projects'>
+              <Link href='/#Projects' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>PROJECTS</li>
               </Link>
-              <Link href='/#Contact'>
+              <Link href='/#Contact' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>CONTACT</li>
               </Link>
             </ul>
@@ -72,19 +72,19 @@ const Navbar = () => {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='py-4 text-sm'>Home</li>
               </Link>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='py-4 text-sm'>About</li>
               </Link>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='py-4 text-sm'>Skills</li>
               </Link>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='py-4 text-sm'>Projects</li>
               </Link>
-              <Link href='/'>
+              <Link href='/' legacyBehavior>
                 <li className='py-4 text-sm'>Contact</li>
               </Link>
             </ul>
@@ -113,7 +113,7 @@ const Navbar = () => {
       </div>
 
     </div>
-  )
+  );
 }
 
 export default Navbar
