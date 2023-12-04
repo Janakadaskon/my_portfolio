@@ -12,7 +12,7 @@ import Node from '../public/assets/skills/node.png'
 import Tailwind from '../public/assets/skills/tailwind.png'
 import PostgreSQL from '../public/assets/skills/postgre.svg'
 import Firebase from '../public/assets/skills/firebase.png'
-import Github from '../public/assets/skills/github1.png'
+import Github from '../public/assets/skills/github.png'
 import Java from '../public/assets/skills/java.png'
 
 const Skills = () => {

@@ -9,7 +9,7 @@ const About = () => {
         <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
             <div className='col-span-2'>
                  <h2>About Me</h2>
-                 <p>Greetings! I'm a versatile and passionate software developer specializing in Java and a spectrum of other languages. With a foundation built on innovation and a commitment to excellence, I bring a unique blend of technical expertise and creative problem-solving to the world of software development.</p>
+                 <p>Greetings! I'm a versatile and passionate full-stack software developer specializing in Java and a spectrum of other languages. With a foundation built on innovation and a commitment to excellence, I bring a unique blend of technical expertise and creative problem-solving to the world of software development.</p>
 
             </div>
             <div className='w-full h-auto m-auto shadow-xl shadow-gray-800 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-500'>
