@@ -3,31 +3,36 @@ import { AiOutlineAim, AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import Image from 'next/image'
+import {useSpring, animated} from 'react-spring'
 
-import Profile from '../public/assets/my.png'
+import Profile from '../public/assets/fav.jpeg'
+import { fromJSON } from 'postcss'
+import { transform } from 'next/dist/build/swc'
 
 const Main = () => {
+
   return (
     <div className='w-full h-screen text-center'> 
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center '>
             <div>
                 <div className='waivy'>
                 <div>
-                    <h2 className='text-[#bf57d6]'>
+                    <h2 className='text-[#101010]'>
                         Hola...!
                         </h2>
                     </div>
 
                 </div>
-                <p className='header uppercase text-sm tracking-widest text-gray-600'>
+                <p className='build-text orbit header uppercase text-sm p-2 tracking-widest text-gray-600'>
                     LET'S BUILD SOMETHING TOGETHER
                 </p>
                 <div className='rounded-full flex justify-center items-center'>
+                    <div className='ring' />
                     <Image 
                         src={Profile}
                         alt='/'
-                        width='125'
-                        height='50'
+                        width='150'
+                        height='150'
                         className='cursor-pointer rounded-full'
                     
                     />
@@ -57,31 +62,105 @@ const Main = () => {
             </div>
         </div>
         <style jsx>{`
-            @keyframes loading{
-                0% {
-                    opacity: 0;
-                }
-                50% {
-                    opacity: 50%;
-                }
-                100% {
-                    opacity: 100%;
-                }
-            }
+            
 
             @keyframes shine {
                 0% {
                     background-position: 0;
+                    opacity: 0.6;
+                }
+                10% {
+                    background-position: 100%;
+                    opacity: 0.7;
+                }
+                20% {
+                    background-position: 200%;
+                    opacity: 0.8;
+                }
+                30% {
+                    background-position: 300%;
+                    opacity: 0.9;
+                }
+                50% {
+                    background-position: 500%;
+                    opacity: 1;
+                }
+                70% {
+                    background-position: 700%;
+                    opacity: 0.9;
+                }
+                80% {
+                    background-position: 800%;
+                    opacity: 0.8;
+                }
+                90% {
+                    background-position: 900%;
+                    opacity: 0.7;
                 }
 
                 100% {
-                    background-position: 500%;
+                    background-position: 1000%;
+                    opacity: 0.6;
                 }
             }
 
                 .waivy h2{
-                    animation: loading 5s infinite;
+                    animation: shine 5s infinite;
+                    background: linear-gradient(90deg, #bf57d6, #2d4d93, #c8a13e, #bf57d6);
+                    background-size: 200% 100%;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    display: inline-block;
                 }
+
+                .orbit{
+                    position: relative;
+                }
+
+                .ring{
+                    position: absolute;
+                    width:16%;
+                    height:16%;
+                    border: 4px solid transparent;
+                    border-radius: 50%;
+                    animation: orbit 4s linear infinite;
+                }
+
+            @keyframes orbit{
+                0%{
+                    border-top-color:#ff0000;
+                    border-bottom-color:#00ff00;
+                    transform: rotate(0deg)
+
+                }
+                50%{
+                    border-top-color:#00ff00;
+                    border-bottom-color:#ff0000;
+                    transform: rotate(180deg)
+
+                }
+                100%{
+                    border-top-color:#ff0000;
+                    border-bottom-color:#00ff00;
+                    transform: rotate(360deg)
+
+                }
+            }
+
+                .build-text{
+                    animation: fadeIn 3s ease-out;
+                }
+            @keyframes fadeIn{
+                0%{
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
             
         `}</style>
