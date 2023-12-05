@@ -25,15 +25,18 @@ const Main = () => {
                     LET'S BUILD SOMETHING TOGETHER
                 </p>
                 <div className='rounded-full flex justify-center items-center'>
-                    <div className='ring' />
+                    <div className='ring' style={{marginTop: '15px'}}/>
                     <Image 
                         src={Profile}
                         alt='/'
                         width='150'
                         height='150'
                         className='cursor-pointer rounded-full'
+                        style={{marginTop: '15px'}}
                     
                     />
+                
+                    
                 </div>
                 <h1 className='py-2 text-gray-700'>
                     Hi, I'm <span className='first-name text-[#2d4d93]'>Janaka </span> <span className='second-name text-[#c8a13e]'> Daskon</span>
@@ -62,7 +65,7 @@ const Main = () => {
         <style jsx>{`
             
 
-            @keyframes shine {
+            @keyframes shine,orbit {
                 0% {
                     background-position: 0;
                     opacity: 0.6;
@@ -118,9 +121,9 @@ const Main = () => {
 
                 .ring{
                     position: absolute;
-                    width:16%;
-                    height:16%;
-                    border: 4px solid transparent;
+                    width:155px;
+                    height:155px;
+                    border: 5px solid transparent;
                     border-radius: 50%;
                     animation: orbit 4s linear infinite;
                 }

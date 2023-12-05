@@ -19,8 +19,8 @@ const Skills = () => {
   return (
     <div className='w-full lg:h-screen p-2'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-            <h2 className='text-xl tracking-widest uppercase text-[#5156e5]'>Skills</h2>
-            <h2 className='py-2'>What Can I do?</h2>
+            <h2 className='text-xl tracking-widest text-center uppercase text-[#5156e5]'>Skills</h2>
+            <h2 className='py-2 text-center'>What Can I do?</h2>
            
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
