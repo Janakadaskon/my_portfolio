@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
@@ -10,19 +10,35 @@ import NavLogo from '../public/assets/alpha.png'
 
 const Navbar = () => {
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState('#ffffff');
+  const [linkColor, setLinkColor] = useState('#1f2937')
 
   const handleNav = () => {
     setNav(!nav)
   }
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90){
+        setShadow(true);
+      }else{
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll' , handleShadow);
+  }, []);
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100'>
+    <div 
+      style={{backgroundColor: `${navBg}`}}
+      className='fixed w-full h-20 shadow-xl z-[100'>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
           <Image 
             src={NavLogo}
             alt='/'
-            width='125'
+            width='120'
             height='50'
             className='cursor-pointer'
           
@@ -32,16 +48,16 @@ const Navbar = () => {
               <Link href='/' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>HOME</li>
               </Link>
-              <Link href='/#About' legacyBehavior>
+              <Link href='/#about' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>ABOUT</li>
               </Link>
-              <Link href='/#Skills' legacyBehavior>
+              <Link href='/#skills' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>SKILLS</li>
               </Link>
-              <Link href='/#Projects' legacyBehavior>
+              <Link href='/#projects' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>PROJECTS</li>
               </Link>
-              <Link href='/#Contact' legacyBehavior>
+              <Link href='/#contact' legacyBehavior>
                 <li className='ml-10 text-sm uppercase hover:border-b'>CONTACT</li>
               </Link>
             </ul>
@@ -72,39 +88,47 @@ const Navbar = () => {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/' legacyBehavior>
+              <Link href='/' >
                 <li className='py-4 text-sm'>Home</li>
               </Link>
-              <Link href='/' legacyBehavior>
+              <Link href='/#about' >
                 <li className='py-4 text-sm'>About</li>
               </Link>
-              <Link href='/' legacyBehavior>
+              <Link href='/#skills' >
                 <li className='py-4 text-sm'>Skills</li>
               </Link>
-              <Link href='/' legacyBehavior>
+              <Link href='/#projects' >
                 <li className='py-4 text-sm'>Projects</li>
               </Link>
-              <Link href='/' legacyBehavior>
+              <Link href='/#contact' >
                 <li className='py-4 text-sm'>Contact</li>
               </Link>
             </ul>
             <div className='pt-40'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
-                Let's Connect
+                Let&apos;s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <div 
+                  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <FaLinkedinIn />
                 </div>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <div 
+                  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <FaGithub />
                 </div>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <div 
+                  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <AiOutlineMail />
                 </div>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <BsFillPersonLinesFill />
-                </div>
+                <Link href='/contact'>
+                  <div 
+                    onClick={() => setNav(!nav)}
+                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <BsFillPersonLinesFill />
+                  </div>
+                </Link>
+                
               </div>
             </div>
           </div>

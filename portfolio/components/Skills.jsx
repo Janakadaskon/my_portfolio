@@ -14,15 +14,36 @@ import PostgreSQL from '../public/assets/skills/postgre.svg'
 import Firebase from '../public/assets/skills/firebase.png'
 import Github from '../public/assets/skills/github.png'
 import Java from '../public/assets/skills/java.png'
+import Sass from '../public/assets/skills/sass.svg'
+import Bootstrap from '../public/assets/skills/bootstrap.png'
+import Spring from '../public/assets/skills/spring.png'
+
+
+
 
 const Skills = () => {
   return (
-    <div className='w-full lg:h-screen p-2'>
+    <div id='skills' className='w-full lg:h-screen p-2'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
             <h2 className='text-xl tracking-widest text-center uppercase text-[#5156e5]'>Skills</h2>
             <h2 className='py-2 text-center'>What Can I do?</h2>
            
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                        <div className='m-auto'>
+                            <Image
+                                src={Spring}
+                                alt='/'
+                                width='64px'
+                                height='64px'
+                            />
+                        </div>
+                        <div className='flex flex-col items-center justify-center'>
+                            <h3>Spring</h3>
+                        </div>
+                    </div>
+                </div>
                 <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
@@ -215,6 +236,36 @@ const Skills = () => {
                         </div>
                         <div className='flex flex-col items-center justify-center'>
                             <h3>Java</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                        <div className='m-auto'>
+                            <Image
+                                src={Sass}
+                                alt='/'
+                                width='64px'
+                                height='64px'
+                            />
+                        </div>
+                        <div className='flex flex-col items-center justify-center'>
+                            <h3>Sass</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                        <div className='m-auto'>
+                            <Image
+                                src={Bootstrap}
+                                alt='/'
+                                width='64px'
+                                height='64px'
+                            />
+                        </div>
+                        <div className='flex flex-col items-center justify-center'>
+                            <h3>Bootstrap</h3>
                         </div>
                     </div>
                 </div>
