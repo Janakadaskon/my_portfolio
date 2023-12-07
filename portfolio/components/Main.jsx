@@ -11,7 +11,7 @@ import Profile from '../public/assets/fav.jpeg'
 const Main = () => {
 
   const handleResume = () => {
-    const resumePath = 'public/assets/cv/cv.pdf';
+    const resumePath = '/assets/cv/cv.pdf';
 
     const link = document.createElement('a');
     link.href = resumePath;
