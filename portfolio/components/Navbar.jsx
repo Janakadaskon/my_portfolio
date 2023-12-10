@@ -86,7 +86,7 @@ const Navbar = () => {
               <p className='w-[85%] md:w-[90%] py-4'>Beyond the Bounderies</p>
             </div>
           </div>
-          <div className='py-4 flex flex-col'>
+          <div className='py-4 flex flex-col '>
             <ul className='uppercase'>
               <Link href='/' >
                 <li className='py-4 text-sm'>Home</li>

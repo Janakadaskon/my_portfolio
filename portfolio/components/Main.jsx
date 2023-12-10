@@ -26,8 +26,8 @@ const Main = () => {
   };
 
   return (
-    <div id= '/' className='w-full h-screen text-center '> 
-        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+    <div id= '/' className='w-full min-h-screen text-center z-1'> 
+        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center '>
             <div className='text-container'>
                 <div className='waivy'>
                 <div>
@@ -38,14 +38,14 @@ const Main = () => {
                 </div>
                 
                 <div className='rounded-full flex justify-center items-center'>
-                    <div className='ring' style={{marginTop: '15px'}}/>
+                    <div className='ring' style={{marginTop: '150px'}}/>
                     <Image 
                         src={Profile}
                         alt='/'
                         width='150'
                         height='150'
                         className='cursor-pointer rounded-full'
-                        style={{marginTop: '15px'}}
+                        style={{marginTop: '150px'}}
                     
                     />
                 
@@ -130,6 +130,7 @@ const Main = () => {
             .text-container{
                 max-width:100%;
                 padding: 0 20px;
+                
             }
             
 
