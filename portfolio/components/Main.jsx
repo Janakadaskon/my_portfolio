@@ -4,6 +4,8 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
+import Typed from "react-typed"
+import { motion } from "framer-motion"
 
 import Profile from '../public/assets/fav.jpeg'
 
@@ -24,9 +26,9 @@ const Main = () => {
   };
 
   return (
-    <div id= '/' className='w-full h-screen text-center'> 
-        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center '>
-            <div>
+    <div id= '/' className='w-full h-screen text-center '> 
+        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+            <div className='text-container'>
                 <div className='waivy'>
                 <div>
                     <h2 className='text-[#101010]'>
@@ -49,13 +51,31 @@ const Main = () => {
                 
                     
                 </div>
-                <p className='build-text orbit header uppercase text-sm p-2 tracking-widest text-gray-600'>
+                <p className='build-text orbit header uppercase text-sm p-2 tracking-widest text-gray-600 '>
                     LET&apos;S BUILD SOMETHING TOGETHER
                 </p>
                 <h1 className='py-2 text-gray-700'>
                     Hi, I&apos;m <span className='build-text first-name text-[#2d4d93] '>Janaka </span> <span className='build-text second-name text-[#c8a13e]'> Daskon</span>
                 </h1>
-                <h1 className='role py-2 text-gray-700'>Full-Stack Developer</h1>
+                {/* <h1 className='role py-2 text-gray-700'>Full-Stack Developer</h1> */}
+                <motion.h1
+                    initial={{ opacity:0 }}
+                    animate={{ opacity:1 }}
+                    transition={{ duration:0.3, delay: 0.9}}
+                    className="text-md dark:text-black capitalize sm:text-2xl"
+                    >
+                        <Typed 
+                            strings={[
+                                "software engineer",
+                                "UI/UX designer",
+                                "Full-Stack developer"
+                                
+                            ]}
+                                typeSpeed={40}
+                                backSpeed={50}
+                                loop
+                        />
+                    </motion.h1>
                 <p className='py-2 text-gray-600 max-w-[70%] m-auto'>
                     Welcome to my digital space, where innovation meets functionality! I&apos;m a 
                     passionate and results-driven Full Stack Developer with a knack for transforming 
@@ -105,6 +125,12 @@ const Main = () => {
             </div>
         </div>
         <style jsx>{`
+
+
+            .text-container{
+                max-width:100%;
+                padding: 0 20px;
+            }
             
 
             @keyframes shine,orbit {
@@ -204,6 +230,8 @@ const Main = () => {
                     transform: translateY(0);
                 }
             }
+
+
 
             
         `}</style>

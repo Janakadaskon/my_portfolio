@@ -91,7 +91,7 @@ const Projects = () => {
                             target='_blank'
                             rel='noreferrer'
                           >
-                        <div className='rounded-full flex justify-center shadow-lg shadow-gray-400 p-2  cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <div className='github rounded-full flex justify-center shadow-lg shadow-gray-400 p-2  cursor-pointer hover:scale-110 ease-in duration-300'>
                         <FaGithub />
                         </div>
                     </a>
