@@ -4,6 +4,7 @@ import colorImg from '../public/assets/projects/color/3.png'
 import google from '../public/assets/projects/google/google.png'
 import posImg1 from '../public/assets/projects/pos/1.png'
 import portfolio from '../public/assets/projects/portfolio/portfolio.png'
+import cafeImg from '../public/assets/projects/cafe/cafe.png'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 
@@ -57,6 +58,29 @@ const Projects = () => {
                     </a>
                   </div>
               </div>
+
+              <div className='flex flex-col justify-center items-center hover:scale-105 ease-in duration-300'>
+                <ProjectItem 
+                    title='Grandpa&apos;s Kitchen' 
+                    backgroundImage={cafeImg} 
+                    projectUrl='/'  
+                    tech='Java fx 
+                            Java'         
+                />
+                  <div style={{marginTop: '15px'}}>
+                    <h3>Grandpa&apos;s Kitchen</h3>
+                    <a 
+                            href="https://github.com/Janakadaskon/Grandpa-s-Kitchen.git"
+                            target='_blank'
+                            rel='noreferrer'
+                          >
+                        <div className='rounded-full flex justify-center shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <FaGithub />
+                        </div>
+                    </a>
+                  </div>
+              </div>
+
               <div className='flex flex-col justify-center items-center hover:scale-105 ease-in duration-300 '>
                 <ProjectItem 
                     title='Google' 
