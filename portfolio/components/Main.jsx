@@ -38,7 +38,7 @@ const Main = () => {
                 </div>
                 
                 <div className='rounded-full flex justify-center items-center'>
-                    <div className='ring' style={{marginTop: '150px'}}/>
+                    <div className='ring' style={{marginTop: '150px'}} />
                     <Image 
                         src={Profile}
                         alt='/'
@@ -186,6 +186,7 @@ const Main = () => {
 
                 .orbit{
                     position: relative;
+                    
                 }
 
                 .ring{
