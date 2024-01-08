@@ -54,9 +54,26 @@ const Main = () => {
                 <p className='build-text orbit header uppercase text-sm p-2 tracking-widest text-gray-600 '>
                     LET&apos;S BUILD SOMETHING TOGETHER
                 </p>
-                <h1 className='py-2 text-gray-700'>
-                    Hi, I&apos;m <span className='build-text first-name text-[#2d4d93] '>Janaka </span> <span className='build-text second-name text-[#c8a13e]'> Daskon</span>
-                </h1>
+                
+                <motion.h1
+                    initial={{ opacity:0 }}
+                    animate={{ opacity:1 }}
+                    transition={{ duration:0.3, delay: 0.9}}
+                    className="text-md dark:text-black capitalize sm:text-2xl"
+                    >
+                        <Typed 
+                            strings={[
+                                "Hi I am",
+                                "Janaka",
+                                "Daskon"
+                                
+                            ]}
+                                typeSpeed={40}
+                                backSpeed={50}
+                                loop
+                        />
+                </motion.h1>
+
                 {/* <h1 className='role py-2 text-gray-700'>Full-Stack Developer</h1> */}
                 <motion.h1
                     initial={{ opacity:0 }}
