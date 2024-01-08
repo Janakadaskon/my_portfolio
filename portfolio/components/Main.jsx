@@ -54,7 +54,9 @@ const Main = () => {
                 <p className='build-text orbit header uppercase text-sm p-2 tracking-widest text-gray-600 '>
                     LET&apos;S BUILD SOMETHING TOGETHER
                 </p>
-                
+                <h1 className='py-2 text-gray-700'>
+                    Hi, I&apos;m <span className='build-text first-name text-[#2d4d93] '>Janaka </span> <span className='build-text second-name text-[#c8a13e]'> Daskon</span>
+                </h1>
                 <motion.h1
                     initial={{ opacity:0 }}
                     animate={{ opacity:1 }}
@@ -63,16 +65,16 @@ const Main = () => {
                     >
                         <Typed 
                             strings={[
-                                "Hi I am",
-                                "Janaka",
-                                "Daskon"
+                                "software engineer",
+                                "UI/UX designer",
+                                "Full-Stack developer"
                                 
                             ]}
                                 typeSpeed={40}
                                 backSpeed={50}
                                 loop
                         />
-                </motion.h1>
+                ></motion.h1>
 
                 {/* <h1 className='role py-2 text-gray-700'>Full-Stack Developer</h1> */}
                 <motion.h1
